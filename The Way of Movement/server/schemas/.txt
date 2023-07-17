@@ -1,0 +1,2 @@
+mvp has me creating new posts within the code itself
+if there's time i'll create an admin interface which allows me to CRUD new posts

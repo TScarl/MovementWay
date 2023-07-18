@@ -15,7 +15,7 @@ import Layout from './layout';
 
 // blog imports
 import Movement101 from './pages/Blog/Movement101/Movement101';
-import MovementNutrition from './pages/Blog/Movement as nutiriton/MovementNutrition';
+import MovementNutrition from './pages/Blog/MovementNutrition/MovementNutrition';
 // store imports
 import Store from './pages/Store';
 
@@ -51,36 +51,17 @@ function App() {
             {/* <StoreProvider> */}
             <Routes>
               {/* main links */}
-              <Route
-                path="/"
-                element={<Home />}
-              />
-              <Route
-                path="/Contact"
-                element={<Contact />}
+              <Route path="/" element={<Home />} />
+              <Route path="/Contact" element={<Contact />}
               />
               {/* blog links */}
-              <Route
-                path="/blog"
-                element={<Movement101 />}
-              />
-              <Route
-                path="/MovementNutrition"
-                element={<MovementNutrition />}
-              />
-              <Route
-                path="/Store"
-                element={<Store />}
-              />
+              <Route path="/blog" element={<Movement101 />} />
+              <Route path="/blog/Movement101" element={<Movement101 />} />
+              <Route path="/blog/MovementNutrition" element={<MovementNutrition />} />
+              <Route path="/Store" element={<Store />} />
               {/* in construction links */}
-              <Route
-                path="/Workshop"
-                element={<Workshop />}
-              />
-              <Route
-                path="/Online-Coaching"
-                element={<Coaching />}
-              />
+              <Route path="/Workshop" element={<Workshop />} />
+              <Route path="/Online-Coaching" element={<Coaching />} />
             </Routes>
             {/* </StoreProvider> */}
           </div>

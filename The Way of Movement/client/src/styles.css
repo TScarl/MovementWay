@@ -138,6 +138,11 @@ p {
   color: var(--light);
 }
 
+.on-this-page a.active {
+  background-color: var(--secondary);
+  color: var(--light);
+}
+
 .blog-archive {
   position: fixed;
   top: 50%;

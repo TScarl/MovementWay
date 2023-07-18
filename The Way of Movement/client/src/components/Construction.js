@@ -3,7 +3,7 @@ import ConstructionImage from '../assets/Construction.jpg'
 
 export default function Construction() {
     return (
-<div class="under-construction">
+<div className="under-construction">
 <img src={ConstructionImage} alt="under construction"></img>
 </div>
     );

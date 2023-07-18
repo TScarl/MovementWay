@@ -1,6 +1,6 @@
 import React from 'react';
 import { OnThisPage } from '../../../components/OnThisPage';
-import { BlogArchive } from '../../../components/BlogArchive'
+import { BlogArchive } from '../../../components/BlogArchive';
 
 export default function Movement101() {
     const activePostId = 1;

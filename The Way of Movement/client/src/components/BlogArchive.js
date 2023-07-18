@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export function BlogArchive({ activePostId }) {
+export function BlogArchive({ activePostTitle }) {
     const blogPosts = [
         { id: 1, title: 'Movement101' },
         { id: 2, title: 'MovementNutrition' },
@@ -13,8 +14,9 @@ export function BlogArchive({ activePostId }) {
             <ul>
                 {blogPosts.map((post) => (
                     <li key={post.id}>
-                        <a href={`/blog/${post.id}`} className={post.id === activePostId ? 'active' : ''}>
-                            {post.title}</a>
+            <Link to={`/blog/${post.title}`} className={post.title === activePostTitle ? 'active' : ''}>
+              {post.title}
+            </Link>
                     </li>
                 ))}
             </ul>

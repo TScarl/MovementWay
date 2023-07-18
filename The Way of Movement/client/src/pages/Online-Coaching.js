@@ -1,9 +1,10 @@
 import React from 'react';
+import Construction from '../components/Construction';
 
 export default function Coaching() {
     return (
         <div>
-            {/* use form from portfolio? */}
+            <Construction />
         </div>
     );
 }

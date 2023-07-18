@@ -6,16 +6,25 @@ export const Navigation = () => {
     <nav>
       <ul className="navigation-links">
         <li>
-          <Link to="/">About me</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/About">About Tom</Link>
         </li>
         <li>
-          <Link to="/portfolio">Portfolio</Link>
+          <Link to="/Store">Store</Link>
         </li>
         <li>
-          <Link to="/resume">Resume</Link>
+          <Link to="/Blog">Blog</Link>
+        </li>
+        <li>
+          <Link to="/Workshop">Workshop</Link>
+        </li>
+        <li>
+          <Link to="/Online-Coaching">Online Coaching</Link>
+        </li>
+        <li>
+          <Link to="/Contact">Contact</Link>
         </li>
       </ul>
     </nav>

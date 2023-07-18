@@ -1,3 +1,4 @@
+/* global styles */
 :root {
   --primary: #232F3E;
   --secondary: #F3A847;
@@ -28,40 +29,69 @@ body {
   color: var(--dark);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-  margin: 5px 0;
-  line-height: 1.25;
+a, ul {
+  text-decoration: none;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* header styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 3rem;
+  font-family: 'Indie Flower', cursive;
+  color: var(--light); 
+  padding-top: 10px;
 }
 
-h2 {
-  font-size: 2rem;
+/* navigation styles */
+.navigation-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
+  padding: 0;
+  padding-bottom: 40px;
+  justify-items: center;
 }
 
-h3 {
-  font-size: 1.75rem;
+/* footer styles  */
+footer {
+  background-color: var(--primary);
+  color: var(--light); 
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  width: 100%;
 }
 
-h4 {
-  font-size: 1.5rem;
+.footer-container {
+  display: flex;
+  justify-content: center;
 }
 
-h5 {
-  font-size: 1.25rem;
+.footer-links {
+  display: flex;
 }
 
-h6 {
-  font-size: 1rem;
+.footer-links p {
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: var(--light);
+}
+
+.footer-text {
+  padding-right: 300px;
 }
 
 p {
@@ -69,15 +99,78 @@ p {
   margin-top: 0;
 }
 
-a {
-  color: var(--tertiary);
-  text-decoration: none;
-  font-weight: bold;
+/* blog styles */
+.blog-container {
+  margin-right: 20%;
+  margin-left: 20%;
+  padding: 20px;
 }
 
-a:hover {
-  text-decoration: underline;
+.on-this-page {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 20%;
+  padding: 10px;
+  border-radius: 5px;
 }
+
+.on-this-page ul {
+  padding: 0;
+}
+
+.on-this-page li {
+  margin-bottom: 10px;
+}
+
+.on-this-page a {
+  display: block;
+  padding: 5px 10px;
+  color: var(--dark);
+  background-color: var(--light);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.on-this-page a:hover {
+  background-color: var(--secondary);
+  color: var(--light);
+}
+
+.blog-archive {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.blog-archive ul {
+  padding: 0;
+}
+
+.blog-archive li {
+  margin-bottom: 10px;
+}
+
+.blog-archive a {
+  display: block;
+  padding: 5px 10px;
+  color: var(--dark);
+  background-color: var(--light);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.blog-archive a:hover {
+  background-color: var(--secondary);
+  color: var(--light);
+}
+
+
 
 header {
   background: var(--primary);

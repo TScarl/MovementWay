@@ -8,15 +8,20 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import Home from './pages/Home'
-// import Detail from './pages/Detail';
-// import NoMatch from './pages/NoMatch';
-// import Login from './pages/Login';
-// import Signup from './pages/Signup';
-// import Nav from './components/Nav';
-// import { StoreProvider } from './utils/GlobalState';
-// import Success from './pages/Success';
-// import OrderHistory from './pages/OrderHistory';
+// main imports
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Layout from './layout';
+
+// blog imports
+import Movement101 from './pages/Blog/Movement101/Movement101';
+import MovementNutrition from './pages/Blog/Movement as nutiriton/MovementNutrition';
+// store imports
+import Store from './pages/Store';
+
+// in construction imports
+import Workshop from './pages/Workshop';
+import Coaching from './pages/Online-Coaching';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -41,16 +46,45 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
-          {/* <StoreProvider> */}
+        <Layout>
+          <div>
+            {/* <StoreProvider> */}
             <Routes>
-              <Route 
-                path="/" 
-                element={<Home />} 
+              {/* main links */}
+              <Route
+                path="/"
+                element={<Home />}
+              />
+              <Route
+                path="/Contact"
+                element={<Contact />}
+              />
+              {/* blog links */}
+              <Route
+                path="/blog"
+                element={<Movement101 />}
+              />
+              <Route
+                path="/MovementNutrition"
+                element={<MovementNutrition />}
+              />
+              <Route
+                path="/Store"
+                element={<Store />}
+              />
+              {/* in construction links */}
+              <Route
+                path="/Workshop"
+                element={<Workshop />}
+              />
+              <Route
+                path="/Online-Coaching"
+                element={<Coaching />}
               />
             </Routes>
-          {/* </StoreProvider> */}
-        </div>
+            {/* </StoreProvider> */}
+          </div>
+        </Layout>
       </Router>
     </ApolloProvider>
   );

@@ -35,6 +35,8 @@ export const QUERY_ALL_PRODUCTS = gql`
       category {
         name
       }
+      author
+      brand
     }
   }
 `;
@@ -65,6 +67,21 @@ export const QUERY_USER = gql`
           image
         }
       }
+    }
+  }
+`;
+
+export const QUERY_POSTS = gql`
+  {
+    posts {
+      _id
+      title
+      content
+      page
+      image
+      video
+      createdAt
+      sections
     }
   }
 `;

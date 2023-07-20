@@ -14,8 +14,8 @@ import Contact from './pages/Contact';
 import Layout from './layout';
 
 // blog imports
-import Movement101 from './pages/Blog/Movement101/Movement101';
-import MovementNutrition from './pages/Blog/MovementNutrition/MovementNutrition';
+import Movement101 from './pages/Blog/Movement101';
+import MovementNutrition from './pages/Blog/MovementNutrition';
 // store imports
 import Store from './pages/Store';
 
@@ -55,7 +55,7 @@ function App() {
               <Route path="/Contact" element={<Contact />}
               />
               {/* blog links */}
-              <Route path="/blog" element={<Movement101 />} />
+              <Route path="/Movement101" element={<Movement101 />} />
               <Route path="/blog/Movement101" element={<Movement101 />} />
               <Route path="/blog/MovementNutrition" element={<MovementNutrition />} />
               <Route path="/Store" element={<Store />} />

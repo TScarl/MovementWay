@@ -1,9 +1,9 @@
 import React from 'react';
-import { OnThisPage } from '../../../components/OnThisPage';
-import { BlogArchive } from '../../../components/BlogArchive';
-
+import { OnThisPage } from '../../components/OnThisPage';
+import { BlogArchive } from '../../components/BlogArchive';
 export default function Movement101() {
-    const activePostId = 1;
+     // destined for the DB
+    const activePostTitle = "Movement101"; // or "What is Movement"
     const sections = [
         { id: '1', title: 'What is Movement?' },
         { id: '2', title: "What's the difference between a movement practice and exercising or specialising?" },
@@ -12,7 +12,7 @@ export default function Movement101() {
 
     return (
         <div className="blog-container">
-                  <BlogArchive activePostId={activePostId} />
+                  <BlogArchive activePostId={activePostTitle} />
 
             <main className="blog-content">
                 <h3 id='1'>

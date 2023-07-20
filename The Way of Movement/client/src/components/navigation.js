@@ -15,7 +15,7 @@ export const Navigation = () => {
           <Link to="/Store">Store</Link>
         </li>
         <li>
-          <Link to="/Blog">Blog</Link>
+          <Link to="/Movement101">Blog</Link>
         </li>
         <li>
           <Link to="/Workshop">Workshop</Link>

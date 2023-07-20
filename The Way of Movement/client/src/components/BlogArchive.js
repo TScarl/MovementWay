@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function BlogArchive({ activePostTitle }) {
+export function BlogArchive({ activeBlogTitle }) {
+    // destined for the DB
     const blogPosts = [
         { id: 1, title: 'Movement101' },
         { id: 2, title: 'MovementNutrition' },
@@ -12,10 +13,12 @@ export function BlogArchive({ activePostTitle }) {
         <div className="blog-archive">
             <h3>Blog Archive</h3>
             <ul>
-                {blogPosts.map((post) => (
-                    <li key={post.id}>
-            <Link to={`/blog/${post.title}`} className={post.title === activePostTitle ? 'active' : ''}>
-              {post.title}
+                {/* maps through all of the blogs */}
+                {blogPosts.map((blog) => (
+                    <li key={blog.id}>
+                        {/* link to the blogs page and displays blog.title in the URL */}
+            <Link to={`/blog/${blog.title}`} className={blog.title === activeBlogTitle ? 'active' : ''}>
+              {blog.title}
             </Link>
                     </li>
                 ))}

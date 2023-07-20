@@ -14,6 +14,8 @@ const typeDefs = gql`
     quantity: Int
     price: Float
     category: Category
+    author: String
+    brand: String
   }
 
   type Order {
@@ -38,6 +40,7 @@ const typeDefs = gql`
     image: String
     video: String
     createdAt: String
+    section: [String]
   }
 
   type Checkout {

@@ -49,3 +49,26 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const UPDATE_USER = gql`
+  mutation updateUser($firstName: String, $lastName: String, $email: String, $password: String) {
+    updateUser(firstName: $firstName, lastName: $lastName, email: $email, password: $password) {
+      _id
+      firstName
+      lastName
+      email
+    }
+  }
+`;
+
+export const UPDATE_PRODUCT = gql`
+  mutation updateProduct($_id: ID!, $quantity: Int!) {
+    updateProduct(_id: $_id, quantity: $quantity) {
+      _id
+      name
+      description
+      quantity
+      price
+    }
+  }
+`;

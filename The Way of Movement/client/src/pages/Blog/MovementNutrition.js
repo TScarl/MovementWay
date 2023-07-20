@@ -1,16 +1,18 @@
 import React from 'react';
-import Construction from '../../../components/Construction';
-import { OnThisPage } from '../../../components/OnThisPage';
-import { BlogArchive } from '../../../components/BlogArchive';
+import Construction from '../../components/Construction';
+import { OnThisPage } from '../../components/OnThisPage';
+import { BlogArchive } from '../../components/BlogArchive'
 
 
 export default function MovementNutrition() {
+    // destined for the DB
     const activePostTitle = "Movement as Nutrition";
     const sections = [
         { id: '1', title: '1' },
         { id: '2', title: "2" },
         { id: '3', title: '3' },
     ];
+    
     return (
         <div className="blog-container">
             <main className="blog-content">

@@ -24,9 +24,17 @@ const postSchema = new Schema({
         type: String
     },
     createdAt: {
-    type: Date,
-    default: Date.now
-  },
+        type: Date,
+        default: Date.now
+    },
+    sections: [
+        {
+            title: {
+                type: String,
+                required: true
+            },
+        },
+    ],
 });
 
 const Post = mongoose.model('Post', postSchema);

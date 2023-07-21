@@ -1,64 +1,48 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-
-// creates style to be used on the active section
-const StyledLink = styled.a`
-&.active {
-  background-color: var(--secondary);
-  color: var(--light);
-}
-`;
+import React from 'react';
 
 export function OnThisPage({ sections }) {
-  const [activeSection, setActiveSection] = useState('');
+  // const [activeSection, setActiveSection] = useState('');
 
-  // Effect to highlight the blog section that the user has scrolled to (not working currently).
-  useEffect(() => {
-    const handleScroll = () => {
-      // Detects the current scroll position on the page.
-      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  //     let currentSection = '';
 
-      // sets the section title to be highlighted
-      let currentSection = '';
+  //     if (sections && Array.isArray(sections)) {
+  //       sections.forEach((section) => {
+  //         if (section && section.offsetTop && section.offsetHeight && section.title) {
 
-      // Iterates through each section to find the active one based on scroll position.
-      sections.forEach((section) => {
-        // uses the top of the current section to define which section user is in
-        const sectionTop = section.offsetTop;
-        // discerns the height of a section (from top to bottom)
-        const sectionHeight = section.offsetHeight;
+  //           if (scrollPosition >= section.offsetTop - section.offsetHeight / 2) {
+  //             currentSection = section.title;
+  //       }
+  //     }
+  //   });
+  // }
 
-        // Sets the new current section if the user has scrolled more than half way to a new section.
-        if (scrollPosition >= sectionTop - sectionHeight / 2) {
-          currentSection = section.title;
-        }
-      });
+  //     setActiveSection(currentSection);
+  //   };
 
-      // Updates the active section state with the currentSection.
-      setActiveSection(currentSection);
-    };
+  //   window.addEventListener('scroll', handleScroll);
 
-    // the window listens for scrolling and applies the handleScroll function
-    window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [sections]);
 
-    return () => {
-    // removes the previous section title
-    window.removeEventListener('scroll', handleScroll);
-    };
-  }, [sections]);
+  if (!sections || sections.length === 0) {
+    return <div>No sections available.</div>;
+  }
 
-  // maps all of the sections and uses the section.title to highlight the active/displayed section
   const links = sections.map((section) => {
-    const isActive = section.title === activeSection;
+    // const isActive = section.title === activeSection;
 
     return (
-      // Uses the section's id as the key to identify the section in the list.
       <li key={section.id}>
-        {/* Applies style to the section title. section.title is displayed in the url. isActive checks which section is active */}
-        <StyledLink href={`#${section.title}`} className={isActive ? 'active' : ''}>
+        <a href={`#${section.title}`} //className={isActive ? 'active' : ''}
+        >
           {section.title}
-        </StyledLink>
-      </li>
+        </a>
+      </li >
     );
   });
 

@@ -76,12 +76,27 @@ export const QUERY_POSTS = gql`
     posts {
       _id
       title
-      content
       page
       image
       video
       createdAt
-      sections
+      sections {
+        id
+        title
+        content
+      }
+    }
+  }
+`;
+
+export const GET_BLOG_CONTENT_BY_TITLE = gql`
+  query GetBlogContentByTitle($title: String!) {
+    getPosts(page: $title) {
+      sections {
+        id
+        title
+        content
+      }
     }
   }
 `;

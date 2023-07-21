@@ -35,12 +35,17 @@ const typeDefs = gql`
   type Post {
     id: ID
     title: String
-    content: String
     page: String
     image: String
     video: String
     createdAt: String
-    section: [String]
+    sections: [Section]
+  }
+
+  type Section {
+    content: String
+    title: String
+    id: ID
   }
 
   type Checkout {
@@ -53,8 +58,10 @@ const typeDefs = gql`
   }
 
   type Query {
+    sections: [Section]
     categories: [Category]
-    postsbyPage(page: Int, limit: Int): [Post]
+    getPosts(title: String, page: String): [Post]
+    section: Post
     products(category: ID, name: String): [Product]
     product(_id: ID!): Product
     user: User
@@ -66,9 +73,13 @@ const typeDefs = gql`
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     addOrder(products: [ID]!): Order
     updateUser(firstName: String, lastName: String, email: String, password: String): User
-    updateProduct(_id: ID!, quantity: Int!): Product
+    updateProductQuantity(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
   }
 `;
+// production/admin mutations:
+// in production environment, will need updateProductDetails (for admin only)
+// CRUD operations for posts
+
 
 module.exports = typeDefs;

@@ -11,7 +11,7 @@ export default function Home() {
                     My home page
                 </p>
             </div>
-            <div classname="aboutMe">
+            <div className="aboutMe">
             <h2>Tom Scarlett</h2>
             <p>
                 About Me

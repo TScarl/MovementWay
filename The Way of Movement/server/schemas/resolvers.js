@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Product, Category, Order, Post } = require('../models');
+const { User, Product, Category, Order, Post, Section } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
@@ -8,15 +8,51 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    postsbyPage: async (_, { page }) => {
+    sections: async () => {
+      return await Section.find();
+    },
+    getPosts: async (_, { title }) => {
       try {
-      const posts = await Post.find({ page });
-      return posts;
+        // If the 'title' argument is provided, fetch posts for that specific title
+        if (title) {
+          const post = await Post.findOne({ page: title }).populate('sections');
+          post._id = post._id.toString();
+          return post ? [post] : [];
+        }
+
+        // If 'title' is not provided, fetch all posts
+        const posts = await Post.find();
+        return posts;
       } catch (error) {
         console.error(error);
         throw new Error('Failed to fetch blogs by page.');
       }
     },
+    // getPosts: async (_, { title }) => {
+    //   try {
+    //     let posts;
+    
+    //     // If the 'title' argument is provided, fetch posts for that specific title
+    //     if (title) {
+    //       posts = await Post.find({ page: title }).populate('sections');
+    //     } else {
+    //       // If 'title' is not provided, fetch all posts
+    //       posts = await Post.find();
+    //     }
+    
+    //     return posts.map((post) => ({
+    //       ...post._doc,
+    //       sections: post.sections.map((section) => ({
+    //         ...section._doc,
+    //         id: section._id.toString(), // Convert section _id to string
+    //       })),
+    //       id: post._id.toString(), // Convert post _id to string
+    //     }));
+    //   } catch (error) {
+    //     console.error(error);
+    //     throw new Error('Failed to fetch blogs by page.');
+    //   }
+    // },
     products: async (parent, { category, name }) => {
       const params = {};
 
@@ -124,10 +160,24 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    updateProduct: async (parent, { _id, quantity }) => {
-      const decrement = Math.abs(quantity) * -1;
-
-      return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+    // in production environment, will need updateProductDetails (for admin only)
+    updateProductQuantity: async (parent, { _id, quantity }) => {
+      try {
+        const product = await Product.findByIdAndUpdate(
+          _id,
+          { $inc: { quantity: -Math.abs(quantity) } },
+          { new: true }
+        );
+    
+        if (!product) {
+          throw new Error('Product not found.');
+        }
+    
+        return product;
+      } catch (error) {
+        console.error(error);
+        throw new Error('Failed to update product.');
+      }
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });

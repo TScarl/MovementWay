@@ -1,0 +1,28 @@
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import { QUERY_PRODUCTS } from '../utils/queries';
+
+export default function ProductList({ category }) {
+  const { loading, error, data } = useQuery(QUERY_PRODUCTS, {
+    variables: { category },
+  });
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  return (
+    <div>
+      <h2>Products</h2>
+      {data.products.map((product) => (
+        <div key={product._id}>
+          <h3>{product.name}</h3>
+          <p>Description: {product.description}</p>
+          <p>Price: ${product.price}</p>
+          <p>Quantity: {product.quantity}</p>
+          <img src={product.image} alt={product.name} style={{ width: '100px' }} />
+          <p>Category: {product.category.name}</p>
+        </div>
+      ))}
+    </div>
+  );
+};

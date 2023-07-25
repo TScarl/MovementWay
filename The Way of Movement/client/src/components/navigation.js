@@ -9,7 +9,7 @@ export const Navigation = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/About">About Tom</Link>
+          <Link to="/#AboutMe">About Tom</Link>
         </li>
         <li>
           <Link to="/Store">Store</Link>

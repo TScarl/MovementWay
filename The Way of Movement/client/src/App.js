@@ -14,11 +14,11 @@ import Contact from './pages/Contact';
 import Layout from './layout';
 
 // blog imports
-import BlogContent from './pages/Blog/BlogContent';
-// import Movement101 from './pages/Blog/Movement101';
-// import MovementNutrition from './pages/Blog/MovementNutrition';
+import Blog from './pages/Blog';
+
 // store imports
 import Store from './pages/Store';
+import ProductList from './components/ProductList';
 
 // in construction imports
 import Workshop from './pages/Workshop';
@@ -49,25 +49,20 @@ function App() {
       <Router>
         <Layout>
           <div>
-            {/* <StoreProvider> */}
             <Routes>
               {/* main links */}
               <Route path="/" element={<Home />} />
-              <Route path="/Contact" element={<Contact />}
-              />
+              <Route path="/Contact" element={<Contact />} />
               {/* blog links */}
-              <Route path="/blog/:title" element={<BlogContent />} />
-
-              {/* <Route path="/Movement101" element={<Movement101 />} />
-              <Route path="/blog/Movement101" element={<Movement101 />} />
-              <Route path="/blog/MovementNutrition" element={<MovementNutrition />} /> */}
+              <Route path="/blog/:_id" element={<Blog />} />
               {/* store links */}
-              <Route path="/Store" element={<Store />} /> 
+              <Route path="/Store" element={<Store />} />
+              <Route path="/store/:categoryId" element={<ProductList />} />
+              {/* <Route path="/products" element={<ProductList />} /> */}
               {/* in construction links */}
               <Route path="/Workshop" element={<Workshop />} />
               <Route path="/Online-Coaching" element={<Coaching />} />
             </Routes>
-            {/* </StoreProvider> */}
           </div>
         </Layout>
       </Router>

@@ -11,6 +11,7 @@ export const QUERY_PRODUCTS = gql`
       image
       category {
         _id
+        name
       }
     }
   }
@@ -72,31 +73,14 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_POSTS = gql`
-  {
-    posts {
+  query getPosts($_id: ID) {
+    getPosts(_id: $_id) {
       _id
       title
-      page
+      content
       image
       video
       createdAt
-      sections {
-        id
-        title
-        content
-      }
-    }
-  }
-`;
-
-export const GET_BLOG_CONTENT_BY_TITLE = gql`
-  query GetBlogContentByTitle($title: String!) {
-    getPosts(page: $title) {
-      sections {
-        id
-        title
-        content
-      }
     }
   }
 `;

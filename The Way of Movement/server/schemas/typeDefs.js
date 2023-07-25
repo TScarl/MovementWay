@@ -33,19 +33,12 @@ const typeDefs = gql`
   }
 
   type Post {
-    id: ID
+    _id: ID
     title: String
-    page: String
     image: String
     video: String
     createdAt: String
-    sections: [Section]
-  }
-
-  type Section {
     content: String
-    title: String
-    id: ID
   }
 
   type Checkout {
@@ -58,10 +51,8 @@ const typeDefs = gql`
   }
 
   type Query {
-    sections: [Section]
     categories: [Category]
-    getPosts(title: String, page: String): [Post]
-    section: Post
+    getPosts(_id: ID): [Post]
     products(category: ID, name: String): [Product]
     product(_id: ID!): Product
     user: User

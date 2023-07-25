@@ -7,10 +7,10 @@ const postSchema = new Schema({
         required: true,
         trim: true
     },
-    page: {
-        type: String,
-        required: true
-    },
+    // page: {
+    //     type: String,
+    //     required: true
+    // },
     image: {
         type: String
     },
@@ -21,10 +21,15 @@ const postSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    sections: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Section',
-    }],
+    content: {
+        type: String,
+        require: true,
+        trim: true
+    }
+    // sections: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Section',
+    // }],
 });
 
 const Post = mongoose.model('Post', postSchema);

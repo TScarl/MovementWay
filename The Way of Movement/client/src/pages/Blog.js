@@ -15,7 +15,7 @@ export default function Blog() {
 
     useEffect(() => {
         const blogPosts = data?.getPosts || [];
-        setSelectedPost(blogPosts.find(post => post._id === "64bf2915cbb6a25bfb346740"));
+        setSelectedPost(blogPosts.find(post => post._id));
     }, [data]);
 
     const handleBlogPostClick = (postId) => {

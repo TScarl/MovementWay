@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmovement_client=self.webpackChunkmovement_client||[]).push([[57],{57:function(e,t,n){e.exports=n.p+"static/media/body-mind-mastery.f528bd64a343fbca88e5.jpg"}}]);

@@ -22,7 +22,7 @@ export const Navigation = () => {
           <Link to="/store">Store</Link>
         </li>
         <li>
-          <Link to="/blog/:_id">Blog</Link>
+          <Link to="/blog">Blog</Link>
         </li>
         {isLoggedIn && (
           <li>

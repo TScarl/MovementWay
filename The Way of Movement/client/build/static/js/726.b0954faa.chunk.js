@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmovement_client=self.webpackChunkmovement_client||[]).push([[726],{726:function(e,t,c){e.exports=c.p+"static/media/allegory-of-the-cave.da514d1069300d786df7.jpg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmovement_client=self.webpackChunkmovement_client||[]).push([[712],{712:function(e,t,c){e.exports=c.p+"static/media/caffeine.a62530ceda14ae2f7f47.jpg"}}]);

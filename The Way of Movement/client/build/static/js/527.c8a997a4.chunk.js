@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmovement_client=self.webpackChunkmovement_client||[]).push([[527],{527:function(e,t,n){e.exports=n.p+"static/media/gym-rings.bf74836346d76f509839.jpg"}}]);

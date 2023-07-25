@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Navigation = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    setIsLoggedIn(false);
+  };
+
   return (
     <nav>
       <ul className="navigation-links">
@@ -9,23 +16,37 @@ export const Navigation = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/#AboutMe">About Tom</Link>
+          <Link to="/#aboutMe">About Tom</Link>
         </li>
         <li>
-          <Link to="/Store">Store</Link>
+          <Link to="/store">Store</Link>
         </li>
         <li>
-          <Link to="/Blog/Movement101">Blog</Link>
+          <Link to="/blog/:_id">Blog</Link>
+        </li>
+        {isLoggedIn && (
+          <li>
+            <Link to="/managePosts">Manage Posts</Link>
+          </li>
+        )}
+        <li>
+          <Link to="/workshop">Workshop</Link>
         </li>
         <li>
-          <Link to="/Workshop">Workshop</Link>
+          <Link to="/online-coaching">Online Coaching</Link>
         </li>
         <li>
-          <Link to="/Online-Coaching">Online Coaching</Link>
+          <Link to="/contact">Contact</Link>
         </li>
-        <li>
-          <Link to="/Contact">Contact</Link>
-        </li>
+        {isLoggedIn ? (
+          <li>
+            <Link to="/logout" onClick={handleLogout}>Logout</Link>
+          </li>
+        ) : (
+          <li>
+            <Link to="/login">Sign In</Link>
+          </li>
+        )}
       </ul>
     </nav>
   );

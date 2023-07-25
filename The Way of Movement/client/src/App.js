@@ -13,8 +13,14 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Layout from './layout';
 
+// user imports
+import Login from './components/login';
+import Signup from './components/signup';
+import Logout from './pages/Sign-in-up-out';
+
 // blog imports
 import Blog from './pages/Blog';
+import ManagePosts from './pages/ManagePosts';
 
 // store imports
 import Store from './pages/Store';
@@ -52,16 +58,21 @@ function App() {
             <Routes>
               {/* main links */}
               <Route path="/" element={<Home />} />
-              <Route path="/Contact" element={<Contact />} />
+              <Route path="/contact" element={<Contact />} />
+              {/* user links */}
+              <Route path="/login" element ={<Login />} />
+              <Route path="/signup" element ={<Signup />} />
+              <Route path="/logout" element={<Logout />} />
               {/* blog links */}
               <Route path="/blog/:_id" element={<Blog />} />
+              <Route path="/managePosts" element={<ManagePosts />} />
               {/* store links */}
-              <Route path="/Store" element={<Store />} />
+              <Route path="/store" element={<Store />} />
               <Route path="/store/:categoryId" element={<ProductList />} />
               {/* <Route path="/products" element={<ProductList />} /> */}
               {/* in construction links */}
-              <Route path="/Workshop" element={<Workshop />} />
-              <Route path="/Online-Coaching" element={<Coaching />} />
+              <Route path="/workshop" element={<Workshop />} />
+              <Route path="/online-coaching" element={<Coaching />} />
             </Routes>
           </div>
         </Layout>

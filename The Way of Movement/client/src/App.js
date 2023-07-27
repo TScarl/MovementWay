@@ -30,23 +30,26 @@ import ProductList from './components/ProductList';
 import Workshop from './pages/Workshop';
 import Coaching from './pages/Online-Coaching';
 
+// Create a new HTTP link to connect to the GraphQL API
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: '/graphql', // Endpoint for the GraphQL API
 });
 
+// Set up authentication headers using the token from local storage
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : '', // Add the token to the authorization header if it exists
     },
   };
 });
 
+// Create the Apollo client with the provided link and cache
 const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
+  link: authLink.concat(httpLink), // Concatenate the authentication link and the HTTP link
+  cache: new InMemoryCache(), // Use an in-memory cache to store query results
 });
 
 function App() {

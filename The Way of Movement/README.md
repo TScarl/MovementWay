@@ -1,156 +1,47 @@
-# 23 Final Project: MERN Stack Single-Page Application
+# Thomas Scarlett Portfolio
 
-Projects have played a key role in your journey to becoming a full-stack web developer. As you apply for development jobs, your portfolio is absolutely vital to opening doors to opportunities. Your portfolio showcases high-quality deployed examples of your work, and you can use your finished projects for that very purpose.
+## Description
 
-This project is a fantastic opportunity to show employers your collaborative skills and coding abilities, especially in the context of a scalable, user-focused MERN app. Remember that employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
+The Way of Movement was designed to be a place where people interested in increasing their physical movement abilities, learning new styles and approaches to fitness and exercise, and gaining a better understanding and self awareness of their bodies and minds. It's a place where they can learn these things and more through the forms of reading posts, watching videos, and have lessons if they wish.
 
-## Project Requirements
+Movement is an inescapable, unstoppable force. No matter how you may try to stop moving, you're alway moving, so why not gain a better understanding of your physical nature? why not practice multiple containers of physicality? So often nowadays people only practice one, maybe two things with their bodies with any intention. Whilst their is a plethora of forms which their physical expressions may take form. You may have a bucket load, even a truck load of reasons why not to (no time, no space, no money, don't know how, etc. etc.), most of these reasons are merely excuses, all made up.
 
-Your group will use everything you’ve learned throughout this course to create a MERN stack single-page application that works with real-world data to solve a real-world challenge, with a focus on data and user demand. This project will provide you with the best opportunity to demonstrate your problem-solving skills, which employers will want to see during interviews. Once again, the user story and acceptance criteria will depend on the project that you create, but your project must fulfill the following requirements:
+The Way of Movement is a place where you can begin learning more about your physical nature and what it means to be a human. I'll leave you with some questions: Are you a human or an animal? Where do you exist within the dimensions of physicality? are you merely a brain with a meat sack or were you formed to be something more?
 
-* Use React for the front end.
+Continue to The Way of Movement to learn some answerws to these questions and more at this URL: 
+https://the-way-of-movement-56e5aaea79f1.herokuapp.com/
 
-* Use GraphQL with a Node.js and Express.js server.
+![TheWayOfMovement](https://github.com/TScarl/MovementWay/assets/123338043/7a51c8ef-4a12-454c-af9c-59359c82868e)
 
-* Use MongoDB and the Mongoose ODM for the database.
 
-* Use queries and mutations for retrieving, adding, updating, and deleting data.
 
-* Be deployed using Heroku (with data).
+## License
 
-* Have a polished UI.
+[![License: MIT License](https://img.shields.io/badge/MIT-License-blue.svg)](https://opensource.org/licenses/MITLicense)
 
-* Be responsive.
+## Table of Contents
 
-* Be interactive (i.e., accept and respond to user input).
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Questions](#questions)
 
-* Include authentication (JWT).
+## Installation
 
-* Protect sensitive API key information on the server.
+No installation is required to view The Way of Movement. Simply visit the live site at the provided URL.
 
-* Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
+## Usage
 
-* Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+The Way of Movement provides an overview of various physical movement practices, articles, and video content to help users expand their understanding of physicality. It showcases Thomas Scarlett's projects and skills, making it a great platform to learn more about his experience and capabilities.
 
-### CSS Styling
+## Contributions
 
-Instead of using a CSS library like Bootstrap, consider one of the following suggestions:
+If you can make everything function correctly with the database, they would be absolutely fantastic... so far, I'ma out've luck with that cr*p.
 
-* Look into the concept of CSS-in-JS, which abstracts CSS to the component level, using JavaScript to describe styles in a declarative and maintainable way. Some popular libraries include [styled-components](https://styled-components.com/) and [Emotion](https://emotion.sh/docs/introduction).
+## License
 
-* Try using a component library, such as [Semantic UI](https://semantic-ui.com/), [Chakra UI](https://chakra-ui.com/), or [Ant Design](https://ant.design/).
+This project is licensed under the MIT License.
 
-* Create all the CSS for your application just using CSS.
+## Questions
 
-Ultimately, it doesn't matter which of these options you choose&mdash;it just needs to look professional and be mobile-friendly.
-
-### Payment Platform
-
-Consider integrating the Stripe payment platform. Even if you don’t create an e-commerce application, you could set up your site to accept charitable donations.
-
-### Bonus
-
-Although this is not a requirement for your project, see if you can also implement functionality to meet the minimum requirements of a PWA:
-
-* Uses a web manifest
-
-* Uses a service worker for offline functionality
-
-* Is installable
-
-## Presentation Requirements
-
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following:
-
-* Elevator pitch: a one minute description of your application
-
-* Concept: What is your user story? What was your motivation for development?
-
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
-
-* Demo: Show your stuff!
-
-* Directions for Future Development
-
-* Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
-
-## Grading Requirements
-
-This project is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 25%
-
-* Satisfies the following code requirements:
-
-  * Application uses React for the front end.
-
-  * Application has a GraphQL API with a Node.js and Express.js server, and uses queries and mutations for retrieving, adding, updating, and deleting data.
-
-  * Application uses MongoDB and the Mongoose ODM for the database and protects sensitive API key information on the server.
-
-  * Application includes user authentication using JWT.
-
-### Concept 10%
-
-* Application should be a unique and novel idea.
-
-* Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-* Application deployed at live URL on Heroku and loads with no errors.
-
-* Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class and id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application is responsive.
-
-### Presentation 10%
-
-* Your group should present using a slide deck.
-
-* Every group member should speak during the presentation.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 10%
-
-* There are no major disparities in the number of GitHub contributions between group members.
-
-### Bonus
-
-Fulfilling all three of the following requirements to turn your app into a PWA will add 10 points to your grade. Note that the highest grade you can achieve is still a 100:
-
-* Uses a web manifest
-
-* Uses a service worker for offline functionality
-
-* Is installable
-
-## How to Submit Your MERN Stack Single-Page Application
-
-**Each member of your group** is required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+For questions or concerns, please contact TScarl at tscarlett@live.com.au.

@@ -6,7 +6,6 @@
   "engines": {
     "node": "18.15.0"
   },
-  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@apollo/client": "^3.7.17",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",

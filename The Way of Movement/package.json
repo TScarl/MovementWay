@@ -12,7 +12,9 @@
     "develop": "start /B cmd /c \"cd server && npm run watch\" & start /B cmd /c \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "watch-server": "cd server && npm run watch",
+    "watch-client": "cd client && npm start"
   },
   "keywords": [],
   "author": "",

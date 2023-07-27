@@ -8,6 +8,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
+    "developing": "concurrently \"npm run watch-server\" \"npm run watch-client\"",
     "develop": "start /B cmd /c \"cd server && npm run watch\" & start /B cmd /c \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
@@ -15,5 +16,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
 }

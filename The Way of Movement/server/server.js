@@ -27,7 +27,7 @@ app.use(express.json());
 
 // Set CORS headers to allow requests from the frontend client
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*'); // Allow requests from any origin, change this to your specific frontend domain if needed
+  res.header('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Add the allowed methods
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Add any custom headers used in requests
   next();

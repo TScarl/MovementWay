@@ -67,7 +67,7 @@ function App() {
               <Route path="/signup" element ={<Signup />} />
               <Route path="/logout" element={<Logout />} />
               {/* blog links */}
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/" element={<Blog />} />
               <Route path="/blog/:_id" element={<Blog />} />
               <Route path="/managePosts" element={<ManagePosts />} />
               {/* store links */}
